@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.lab.fangdou_comp228lab4.HelloController">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <center>
+        <GridPane hgap="10" vgap="10" >
+            <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+            <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtAddress" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+            <Label text="City:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtCity" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+            <Label text="Province:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtProvince" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+            <Label text="Postal Code:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="txtPostalCode" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <TextField fx:id="txtPhone" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+            <VBox spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="0"
+                  GridPane.rowSpan="7" GridPane.columnSpan="2" alignment="TOP_RIGHT" style="-fx-alignment: TOP_RIGHT;">
+                <HBox spacing="20" alignment="CENTER_RIGHT">
+                    <RadioButton fx:id="rbComputerScience" text="Computer Science"/>
+                    <RadioButton fx:id="rbBusiness" text="Business"/>
+                </HBox>
+
+                <ComboBox fx:id="cmbCourses" promptText="Select Course"/>
+                <Button text="Add Course" onAction="#handleAddCourse" />
+                <ListView fx:id="lstSelectedCourses" prefHeight="150"/>
+
+                <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-alignment: CENTER_RIGHT;">
+                    <CheckBox fx:id="chkStudentCouncil" text="Student Council"/>
+                    <CheckBox fx:id="chkVolunteerWork" text="Volunteer Work"/>
+                </VBox>
+            </VBox>
+
+            <Button text="Display" onAction="#handleDisplay"
+                    GridPane.columnIndex="0" GridPane.rowIndex="7"
+                    GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+
+            <TextArea fx:id="txtDisplay" prefRowCount="10" wrapText="true"
+                      GridPane.columnIndex="0" GridPane.rowIndex="8"
+                      GridPane.columnSpan="4"/>
+        </GridPane>
+    </center>
+</BorderPane>
