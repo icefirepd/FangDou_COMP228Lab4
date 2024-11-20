@@ -58,8 +58,11 @@
 
             <Button text="Display" onAction="#handleDisplay"
                     GridPane.columnIndex="0" GridPane.rowIndex="7"
-                    GridPane.columnSpan="2" GridPane.halignment="CENTER"/>
+                    GridPane.columnSpan="4" GridPane.halignment="CENTER"/>
 
+<!--            <TextArea fx:id="txtDisplay" prefRowCount="10" wrapText="true"-->
+<!--                      GridPane.columnIndex="0" GridPane.rowIndex="8"-->
+<!--                      GridPane.columnSpan="4"/>-->
             <ScrollPane GridPane.columnIndex="0" GridPane.rowIndex="8" GridPane.columnSpan="4" GridPane.rowSpan="1">
                 <content>
                     <TextArea fx:id="txtDisplay" prefRowCount="5" wrapText="true"/>
